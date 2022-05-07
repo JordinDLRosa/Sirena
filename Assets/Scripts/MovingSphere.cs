@@ -113,7 +113,10 @@ public class MovingSphere : MonoBehaviour
 
 	void Update()
 	{
-		
+
+		Debug.DrawLine(transform.position, transform.forward * 10, Color.red);
+		Debug.DrawLine(transform.position, Vector3.forward * 10, Color.yellow);
+
 		playerInput.x = Input.GetAxis("Horizontal");
 		playerInput.y = Input.GetAxis("Vertical");
 		playerInput.z = Swimming ? Input.GetAxis("UpDown") : 0f;
